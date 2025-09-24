@@ -25,38 +25,59 @@ export function useContent() {
   }, []);
 
   const loadContent = async () => {
+    console.log('Loading content from database...');
+    
     // Load quotes
-    const { data: quotesData } = await supabase
+    const { data: quotesData, error: quotesError } = await supabase
       .from('quotes')
       .select('*')
       .eq('is_active', true);
 
     // Load faces
-    const { data: facesData } = await supabase
+    const { data: facesData, error: facesError } = await supabase
       .from('funny_faces')
       .select('*')
       .eq('is_active', true);
 
-    if (quotesData) {
+    console.log('Quotes loaded:', quotesData?.length || 0, 'quotes');
+    console.log('Faces loaded:', facesData?.length || 0, 'faces');
+    
+    if (quotesError) {
+      console.error('Error loading quotes:', quotesError);
+    }
+    
+    if (facesError) {
+      console.error('Error loading faces:', facesError);
+    }
+
+    if (quotesData && quotesData.length > 0) {
       setQuotes(quotesData);
       setCurrentQuote(quotesData[Math.floor(Math.random() * quotesData.length)]);
     }
 
-    if (facesData) {
+    if (facesData && facesData.length > 0) {
       setFaces(facesData);
       setCurrentFace(facesData[Math.floor(Math.random() * facesData.length)]);
     }
   };
 
   const getRandomQuote = () => {
-    if (quotes.length === 0) return null;
+    if (quotes.length === 0) {
+      console.warn('No quotes available');
+      return null;
+    }
+    console.log('Getting random quote from', quotes.length, 'available quotes');
     const randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
     setCurrentQuote(randomQuote);
     return randomQuote;
   };
 
   const getRandomFace = () => {
-    if (faces.length === 0) return null;
+    if (faces.length === 0) {
+      console.warn('No faces available');
+      return null;
+    }
+    console.log('Getting random face from', faces.length, 'available faces');
     const randomFace = faces[Math.floor(Math.random() * faces.length)];
     setCurrentFace(randomFace);
     return randomFace;
