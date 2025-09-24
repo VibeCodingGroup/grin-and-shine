@@ -2,41 +2,70 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* Happiness App Design System - Joyful and uplifting colors */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Joyful Background Gradients */
+    --background: 45 100% 96%;
+    --background-gradient: linear-gradient(135deg, hsl(45 100% 96%), hsl(55 90% 92%));
+    --foreground: 25 15% 25%;
 
+    /* Card Styling */
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 25 15% 25%;
+    --card-shadow: 0 10px 30px -5px hsl(45 50% 80% / 0.3);
+    --card-hover-shadow: 0 20px 40px -10px hsl(45 50% 70% / 0.4);
 
+    /* Popover */
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 25 15% 25%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Primary - Warm Orange */
+    --primary: 25 95% 60%;
+    --primary-foreground: 0 0% 100%;
+    --primary-hover: 25 95% 55%;
+    --primary-glow: 25 95% 75%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* Secondary - Sunny Yellow */
+    --secondary: 45 100% 70%;
+    --secondary-foreground: 25 15% 25%;
+    --secondary-hover: 45 100% 65%;
+    --secondary-glow: 45 100% 85%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    /* Accent - Soft Pink */
+    --accent: 340 75% 75%;
+    --accent-foreground: 25 15% 25%;
+    --accent-hover: 340 75% 70%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    /* Muted */
+    --muted: 45 30% 90%;
+    --muted-foreground: 25 15% 45%;
 
+    /* Success Green */
+    --success: 120 60% 60%;
+    --success-foreground: 0 0% 100%;
+
+    /* Destructive */
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    /* Borders and Inputs */
+    --border: 45 40% 85%;
+    --input: 45 40% 90%;
+    --ring: 25 95% 60%;
 
-    --radius: 0.5rem;
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(25 95% 60%), hsl(45 100% 70%));
+    --gradient-secondary: linear-gradient(135deg, hsl(45 100% 70%), hsl(55 90% 75%));
+    --gradient-accent: linear-gradient(135deg, hsl(340 75% 75%), hsl(320 70% 80%));
+    --gradient-warm: linear-gradient(135deg, hsl(25 95% 60%), hsl(340 75% 75%));
+
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+    --radius: 1rem;
 
     --sidebar-background: 0 0% 98%;
 
