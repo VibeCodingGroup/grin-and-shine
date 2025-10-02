@@ -6,41 +6,41 @@
 
 @layer base {
   :root {
-    /* Joyful Background Gradients */
-    --background: 45 100% 96%;
-    --background-gradient: linear-gradient(135deg, hsl(45 100% 96%), hsl(55 90% 92%));
-    --foreground: 25 15% 25%;
+    /* Blue Background Gradients */
+    --background: 210 100% 97%;
+    --background-gradient: linear-gradient(135deg, hsl(210 100% 97%), hsl(220 90% 95%));
+    --foreground: 220 20% 20%;
 
     /* Card Styling */
     --card: 0 0% 100%;
-    --card-foreground: 25 15% 25%;
-    --card-shadow: 0 10px 30px -5px hsl(45 50% 80% / 0.3);
-    --card-hover-shadow: 0 20px 40px -10px hsl(45 50% 70% / 0.4);
+    --card-foreground: 220 20% 20%;
+    --card-shadow: 0 10px 30px -5px hsl(210 60% 80% / 0.3);
+    --card-hover-shadow: 0 20px 40px -10px hsl(210 60% 70% / 0.4);
 
     /* Popover */
     --popover: 0 0% 100%;
-    --popover-foreground: 25 15% 25%;
+    --popover-foreground: 220 20% 20%;
 
-    /* Primary - Warm Orange */
-    --primary: 25 95% 60%;
+    /* Primary - Ocean Blue */
+    --primary: 210 90% 55%;
     --primary-foreground: 0 0% 100%;
-    --primary-hover: 25 95% 55%;
-    --primary-glow: 25 95% 75%;
+    --primary-hover: 210 90% 50%;
+    --primary-glow: 210 90% 70%;
 
-    /* Secondary - Sunny Yellow */
-    --secondary: 45 100% 70%;
-    --secondary-foreground: 25 15% 25%;
-    --secondary-hover: 45 100% 65%;
-    --secondary-glow: 45 100% 85%;
+    /* Secondary - Sky Blue */
+    --secondary: 200 85% 65%;
+    --secondary-foreground: 220 20% 20%;
+    --secondary-hover: 200 85% 60%;
+    --secondary-glow: 200 85% 80%;
 
-    /* Accent - Soft Pink */
-    --accent: 340 75% 75%;
-    --accent-foreground: 25 15% 25%;
-    --accent-hover: 340 75% 70%;
+    /* Accent - Light Blue */
+    --accent: 190 75% 70%;
+    --accent-foreground: 220 20% 20%;
+    --accent-hover: 190 75% 65%;
 
     /* Muted */
-    --muted: 45 30% 90%;
-    --muted-foreground: 25 15% 45%;
+    --muted: 210 30% 92%;
+    --muted-foreground: 220 20% 45%;
 
     /* Success Green */
     --success: 120 60% 60%;
@@ -51,15 +51,15 @@
     --destructive-foreground: 0 0% 100%;
 
     /* Borders and Inputs */
-    --border: 45 40% 85%;
-    --input: 45 40% 90%;
-    --ring: 25 95% 60%;
+    --border: 210 40% 88%;
+    --input: 210 40% 92%;
+    --ring: 210 90% 55%;
 
     /* Gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(25 95% 60%), hsl(45 100% 70%));
-    --gradient-secondary: linear-gradient(135deg, hsl(45 100% 70%), hsl(55 90% 75%));
-    --gradient-accent: linear-gradient(135deg, hsl(340 75% 75%), hsl(320 70% 80%));
-    --gradient-warm: linear-gradient(135deg, hsl(25 95% 60%), hsl(340 75% 75%));
+    --gradient-primary: linear-gradient(135deg, hsl(210 90% 55%), hsl(200 85% 65%));
+    --gradient-secondary: linear-gradient(135deg, hsl(200 85% 65%), hsl(190 80% 70%));
+    --gradient-accent: linear-gradient(135deg, hsl(190 75% 70%), hsl(180 70% 75%));
+    --gradient-warm: linear-gradient(135deg, hsl(210 90% 55%), hsl(190 75% 70%));
 
     /* Animations */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
